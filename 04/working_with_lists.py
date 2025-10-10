@@ -117,3 +117,39 @@ print("every sandwich needs")
 for toppings in sandwich[1:3]:
     print(f'{toppings},')
 print(f"and of coures {sandwich[0]}!")
+
+# to copy a list into a new array a slice can be made that
+# can omits the first and last indecies of the existing
+# array
+
+# appending lettuce to prove it is a unique array
+super_sandwich = sandwich[:]
+super_sandwich.append('lettuce')
+print(sandwich)
+print(super_sandwich)
+
+# tuples are similar to lists. unlike lists however, are
+# immutable. 
+
+# the syntax of a touple is also similar to a list but rather
+# than using square brackets as wrappers touples use
+# parentheses.
+
+touple = (1, 2)
+print(touple[0])
+
+# if generating a touple, ensure the touple contains a comma
+# as what defines a touple is the presence of a comma
+
+# example of single element touple:
+single_touple = (1,)
+
+# touples can be looped though the same as a standard list
+# array
+for content in touple:
+    print(content)
+
+# because a touple is an immutable element, it must be
+# redefined in order to modify its' contents.
+touple = (0, 1)
+print(touple)
