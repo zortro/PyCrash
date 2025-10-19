@@ -24,13 +24,13 @@ print(car_0)
 car_0 = {}
 
 car_0['color'] = 'blue'
-car_0['model'] = 'subaru'
+car_0['model'] = 'impreza'
 
 print(f'\n{car_0}')
 
 
 # using same syntax, keys and values can be modified.
-car_0['model'] = 'mitsubishi'
+car_0['model'] = 'eclipse'
 
 print(f'\n{car_0}')
 
@@ -54,4 +54,86 @@ print(f'\n{car_0}')
 # get() is used as a default value to be returned if a value does
 # not exist. This topic will be covered further in ./10
 car_value = car_0.get('nothing', 'nothing to see here.')
-print(f'\n{car_value}')
+print(f'\n{car_value}\n')
+
+# looping all keys and values requires the key and its value
+# be defined within the loop request
+# NOTE: the key and values can be given any names as long as
+# syntax is followed
+for key, value in car_0.items():
+    print(f'Key: {key}')
+    print(f'value: {value}')
+print('\n')
+    
+# dictionaries loop outputs can be filtered by key via the
+# key() method
+for k in car_0.keys():
+    print(f'Key: {k}')
+
+# values can be filtered as well using the values() method
+print('\nThe following are values found within `car_0`:')
+for v in car_0.values():
+    print(v)
+print('\n')
+
+# consider a value shows up more than once
+car_0['brand'] = 'mitsubishi'
+car_0['maker'] = 'mitsubishi'
+print(f'{car_0}\n')
+
+# to check for repeats the set() function can be used to pull
+# out the unique values
+for v in set(car_0.values()):
+    print(v)
+print('\n')
+
+# by default a dictionary will loop through key values if not
+# defined
+for k in car_0:
+    print(f'Key: {k}')
+print('\n')
+
+# if statements can be utilized via the keys() method aswell
+query = ['mileage', 'owners', 'color']
+for k, v in car_0.items():
+    if k in query:
+        print(f'{k}: {v}')
+print('\n')
+
+# using the sorted function will return the keys in the 
+# dictionary in order
+for k in sorted(car_0.keys()):
+    print(f'key: {k}')
+print('\n')
+
+# dictionaries can be nested within lists
+car_1 = {'brand': 'honda', 'color': 'red',
+         'maker': 'honda', 'mileage': 5000,
+         'model': 'civic'}
+
+car_2 = {'brand': 'toyota', 'color': 'white',
+         'maker': 'toyota', 'mileage': 125000,
+         'model': 'avalon'}
+
+cars = [car_0, car_1, car_2]
+
+for car in cars:
+    print(car)
+print('\n')
+
+# create a lot of 5 cars of the same model
+lot = []
+
+for number in range(5):
+    new_car = {'brand': 'honda', 'color': 'red',
+         'maker': 'honda', 'mileage': 5000,
+         'model': 'civic'}
+    lot.append(new_car)
+print('\n')
+
+# the values of a range within the list can be adjusted
+
+
+# show lot
+for car in lot:
+    print(car)
