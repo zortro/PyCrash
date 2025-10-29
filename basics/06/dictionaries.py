@@ -121,7 +121,7 @@ for car in cars:
     print(car)
 print('\n')
 
-# create a lot of 5 cars of the same model
+# create a lot of 10 cars with 5 of each model
 lot = []
 
 for number in range(5):
@@ -129,11 +129,72 @@ for number in range(5):
          'maker': 'honda', 'mileage': 5000,
          'model': 'civic'}
     lot.append(new_car)
+    
+print('\n')
+
+for number in range(5):
+    new_car = {'brand': 'kia', 'color': 'green',
+         'maker': 'honda', 'mileage': 5000,
+         'model': 'civic'}
+    lot.append(new_car)
 print('\n')
 
 # the values of a range within the list can be adjusted
 
+for cars in lot[3:7]:
+    if cars['color'] == 'red':
+        cars['color'] = 'orange'
+    elif cars['brand'] == 'kia':
+        cars['brand'] = 'toyota'
+        cars['model'] = '4runner'
+        cars['color'] = 'blue'
 
 # show lot
 for car in lot:
     print(car)
+    
+# dictionary containing pizza and it's toppings using nested
+# key pairs
+pizza = {
+    'crust': 'stuffed',
+    'toppings': ['pepperoni', 'cheese', 'sausage'],
+}
+
+# lists all toppings stored in key of toppings within pizza
+# dictionary
+for topping in pizza['toppings']:
+    print(f"your pizza will have {topping}")
+    
+# dict containing people's favorite languages
+favorite_languages = {
+'jen': ['python', 'rust'],
+'sarah': ['c'],
+'edward': ['rust', 'go'],
+'phil': ['python', 'haskell'],
+}
+
+# displays individuals lists of favorite languages
+for name, languages in favorite_languages.items():
+    print(f"\n{name.title()}'s favorite languages are:")
+    for language in languages:
+        print(f'\t{language.title()}')
+        
+# dictionaries can be built within one another
+# it can be messy but can be used circumstancially
+users = {
+    'fakeAcc' : {
+        'password' : 'Unsecure123',
+        'email' : 'example@example.com'
+    },
+    'tippyTwo' : {
+        'password' : 'iLoveMyShihTzu',
+        'email' : 'tippy@two.com'
+    }
+}
+
+for user, info in users.items():
+    print(f'\nuser: {user} data:')
+    password = f'{info['password']}'
+    email = f'{info['email']}'
+    print(f'\tpassword: {password}')
+    print(f'\temail: {email}')
