@@ -1,10 +1,10 @@
 # PyCrash
-My attempts at learning to use python using Eric Matthes' 'Python Crash Course' as a learning guide.
+Learning the Python syntax, referencing Eric Matthes' 'Python Crash Course' as a learning guide.
 
 # Guide
 
-Contents under source are the original 'cheat sheet' documents provided by https://github.com/ehmatthes/pcc_3e/
+```./basics``` contains my own commented code
 
-./basics contains information regarding syntax and basic usage
+```./projects``` contains my own project directories that are instructed by the book.
 
-./projects contains project directories
+```./source/``` contains any reference documentation provided by Eric Matthes via ([Github](https://github.com/ehmatthes/pcc_3e))
