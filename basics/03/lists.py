@@ -1,118 +1,83 @@
-# a list is a set of items contained in square brackets
-# `[]`
-
+# exzmple of what a list looks like:
 consoles = ['nintendo', 'playstation', 'xbox']
 
-# ['nintendo', 'playstation', 'xbox']
 print(consoles)
 
 # xbox
-# note: when accessing items based on indecies the
-# returned value is not contained in brackets.
-# using an index value of -1 will fetch the last element
-# in the array given there are elements in the array
+# fetching items by a negative index will fetch in the reverse
+print(consoles[-2])
 print(consoles[2])
 
-# example use of index value
 message = f"My very first console was a {consoles[0].title()}"
 
-# My very first console was a Nintendo
 print(message)
 
-# example of an index value can be modified
+#  modifying index value by pointing to index
 numbers = [1, 2, 3]
 numbers[2] = 5
 print(numbers)
 
-# the append() method can be used to add elements
-# to the end of a list
+# method: append() will append value to the end of a list
 consoles.append('sega')
 
-#['nintendo', 'playstation', 'xbox', 'sega']
 print(consoles)
 
-# this can also be used to populate an empty array
+# this can also be used to populate an empty list
 shopping_cart = []
 shopping_cart.append('tomatoes')
 shopping_cart.append('lettuce')
 shopping_cart.append('beef')
 
-# ['tomatoes', 'lettuce', 'beef']
 print(shopping_cart)
 
 # the insert() method can be called to insert an element
 # into a specific index of the list
-
 shopping_cart.insert(2, 'buns')
 
-# ['tomatoes', 'lettuce', 'buns', 'beef']
 print(shopping_cart)
 
-# to remove elements from a list the del statement can
-# be called to remove said element.
+# del statement is used to delete items from a list
 del consoles[3]
 
-# ['nintendo', 'playstation', 'xbox']
 print(consoles)
 
-# the method pop() can be called to remove the last
-# element in an array
+# tmethod: pop() will remove the last item in a list
 
 last_console = consoles.pop()
 
 # xbox
 print(last_console)
 
-# pop() can be used in combination with an index number
-# to pop a specific index element out of it's array
-
-# nintendo
+# pop() specified indecies of a list
 print(consoles.pop(0))
 
-# the remove() method can also be used to remove a given
-# value in an array
-
-# remove() will only remove the first instance of a
+# method: remove() will remove a specified value from a list
+# this method will only remove the first instance of a
 # specified value
-
 consoles.append('playstation 2')
 old_console = 'playstation'
 
 # playstation
 consoles.remove(old_console)
 
-# notice using pop() or remove() on these elements will
-# remove them from their respective array
-
 # playstation 2
 print(consoles)
 
 alphabet = ['b', 'c', 'd', 'f', 'a', 'g', 'e']
-
-# the sort() method can be called to sort lists
-# alphabetically, this will affect the array
-# permenantly
-
+# method: sort() will modify a list to alphebatize its contents
 alphabet.sort()
 
-# ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 print(alphabet)
 
-# lists can be temporarily sorted by printing the array
-# using the sorted() method
+# method: sorted() will temporarily alphebatize items in a list
 cars = ['subaru', 'honda', 'toyota']
 
-# ['honda', 'subaru', 'toyota']
 print(sorted(cars))
 
-# lists can be reversed using the reverse() method
+# method: reverse() will return a reversed copy of the parent list
 cars.reverse()
 
-# ['toyota', 'honda', 'subaru']
 print(cars)
 
-# to get the index length of the array use the len()
-# method
-
-# 3
+# method: len() will return the number of items in a list
 print(len(cars))
