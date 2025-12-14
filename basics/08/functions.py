@@ -24,11 +24,21 @@ takeMeasurement(8, 'wall', 12)
 
 # keywords arguements can be used to prevent confusion in declaration
 takeMeasurement(measuredItem='wall', heightInFeet=8, widthInFeet=12, measurementType='Meters')
-
 # returning a value from the function
-def helloWorld(hello, world):
-    result = f'{hello} {world}'
-    return result
+def createPerson(firstName, lastName, middleName='', age='None'):
+    # validating that middle name is present
+    if middleName == '':
+        # return appropriate person object  based on presence of middlename
+        person = {'first': firstName, 'last': lastName, 'age': age}
+    else:
+        person = {'first': firstName, 'middle': middleName, 'last': lastName, 'age': age}
+        
+    if age:
+        person['age'] = age
+    return person
 
-sayHello = helloWorld('hello', 'world')
-print(sayHello)
+# create value as returned value of helloWorld function
+noMiddleName = createPerson('Beetee', 'Latier')
+hasMiddleName = createPerson('Steve', 'Robin', 'Renolds', age=36)
+print(noMiddleName)
+print(hasMiddleName)
