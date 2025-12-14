@@ -42,3 +42,20 @@ noMiddleName = createPerson('Beetee', 'Latier')
 hasMiddleName = createPerson('Steve', 'Robin', 'Renolds', age=36)
 print(noMiddleName)
 print(hasMiddleName)
+
+# while loops allow code to execute only while a condition is true
+# this code is blocked out because if not it would loop infinitely
+'''
+while True:
+    print('\nYour username please?')
+    print('\nTo quit press "q"')
+    username = input('username: ')
+    if username == 'q':
+        break
+
+    user = greet_user(username)
+
+    print(f'Ah, yes. Welcome back {user}!')
+'''
+
+# 12-13-2025 CH08 PG142
