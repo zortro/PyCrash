@@ -3,7 +3,6 @@ consoles = ['nintendo', 'playstation', 'xbox']
 
 print(consoles)
 
-# xbox
 # fetching items by a negative index will fetch in the reverse
 print(consoles[-2])
 print(consoles[2])
