@@ -1,17 +1,14 @@
 # basic operations such as addition (+), subtraction (-), multiplication (*),
 # and division (/) can be performed in python.
 
-# output 5
+# addition
 print(1+4)
-
-# output 4
+# subtract
 print(5-1)
-
-# output 6
+# multiply
 print(2*3)
-
-# output 5.0
-# note division will always return a float rather than an int
+fl
+# division (note that python will return float division by default. Floor division can be used by importing using `//`)
 print(10/2)
 
 # to use exponent values the terminal uses two mulitplication symbols (**)
